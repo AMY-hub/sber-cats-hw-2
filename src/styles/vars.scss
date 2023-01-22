@@ -1,0 +1,21 @@
+$main-font: Arial,
+Helvetica,
+sans-serif;
+$main-text: rgb(22, 20, 25);
+$btn-bg: rgb(83, 80, 98);
+$btn-bg-hover: rgb(248, 246, 255);
+$pale-text: #5e5c70;
+$bg: #f8f7f8;
+$bg-secondary: #e8e5ef;
+$accent1: #ea5978ac;
+$accent2: #2fbc84ac;
+$main-shadow-bottom: 0 3px 5px 0 rgba(58, 56, 61, 0.2);
+$main-shadow-top: 0 -3px 5px 0 rgba(58, 56, 61, 0.2);
+$gradient: linear-gradient(to bottom, rgba(94, 92, 112, 1) 0%, rgba(125, 185, 232, 0) 100%);
+
+@mixin Title2 {
+    margin: 0 0 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: darken($btn-bg, $amount: 5);
+}

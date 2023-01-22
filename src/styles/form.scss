@@ -1,0 +1,88 @@
+.add-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    &__title {
+        @include Title2;
+        grid-column: 1 / 4;
+    }
+
+    &__img {
+        grid-row-end: span 3;
+        border-radius: 4px;
+        box-shadow: 0 0 2px 0 #0004;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    button {
+        border: none;
+        border-radius: 4px;
+        background-color: #0002;
+        cursor: pointer;
+        width: 100%;
+        box-sizing: border-box;
+        height: 30px;
+        justify-self: flex-end;
+        align-self: flex-end;
+    }
+
+    button:active {
+        background-color: #0006;
+        color: #fff;
+        box-shadow: 0 0 2px 0 #0004;
+    }
+
+    input,
+    textarea {
+        outline: none;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #0002;
+        height: 30px;
+        border-radius: 4px;
+        padding: 4px 8px;
+    }
+
+    input:focus,
+    textarea:focus {
+        box-shadow: 0 0 2px 0 #0004;
+    }
+
+    input[type="checkbox"] {
+        width: initial;
+        height: initial;
+        box-sizing: initial;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    textarea {
+        height: 100%;
+        grid-row-end: span 2;
+        resize: vertical;
+    }
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.form__error {
+    height: 0;
+    overflow: hidden;
+    margin-top: 1rem;
+    border-radius: 10px;
+    background-color: rgba(245, 84, 84, 0.133);
+    transition: all 200ms;
+
+    div {
+        padding: 1rem;
+    }
+}
