@@ -1,0 +1,39 @@
+mixin edit-form
+    .edit-form&attributes(attributes)
+        form.edit-form__form
+            .edit-form__img(style="background-image:url('https://cdn-icons-png.flaticon.com/512/1089/1089421.png')")
+            +input({
+                type: 'text',
+                name: 'img_link',
+                placeholder: 'Ссылка на фото',
+                required: true
+            }).edit-form__link#link
+            +input({
+                type: 'number',
+                name: 'age',
+                placeholder: 'Возраст',
+                required: true
+            }).edit-form__age
+            +input({
+                type: 'text',
+                name: 'name',
+                placeholder: 'Имя',
+                required: true
+            }).edit-form__name
+            +input({
+                type: 'number',
+                name: 'rate',
+                placeholder: 'Рейтинг (0-10)',
+                required: true
+            }).edit-form__rate(min=0 max=10)
+            +input({
+                text: 'Любимчик',
+                type: 'checkbox',
+                name: 'favourite'
+            }).edit-form__fav
+            +textarea({
+                name: 'description',
+                placeholder: 'Описание'
+            }).edit-form__description
+            +button({text: 'Сохранить изменения'})
+        +error-hint

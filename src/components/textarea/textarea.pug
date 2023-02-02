@@ -1,0 +1,3 @@
+mixin textarea(props)
+    label.field&attributes(attributes)!=props.text
+        textarea.field__input(name=props.name placeholder=props.placeholder required=props.required rows=5)

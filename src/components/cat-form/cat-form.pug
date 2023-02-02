@@ -1,0 +1,51 @@
+mixin cat-form
+    .cat-form&attributes(attributes)
+        h2.cat-form__title Добавить питомца
+        form.cat-form__form
+            .cat-form__img(style="background-image:url('https://cdn-icons-png.flaticon.com/512/1089/1089421.png')")
+            +input({
+                type: 'number',
+                name: 'id',
+                placeholder: 'id',
+                required: true,
+                min: 1
+            }).cat-form__id
+            +input({
+                type: 'number',
+                name: 'age',
+                placeholder: 'Возраст',
+                required: true,
+                min: 1,
+                max: 20
+            }).cat-form__age
+            +input({
+                type: 'text',
+                name: 'name',
+                placeholder: 'Имя',
+                required: true
+            }).cat-form__name
+            +input({
+                type: 'number',
+                name: 'rate',
+                placeholder: 'Рейтинг (0-10)',
+                required: true,
+                min: 1,
+                max: 10
+            }).cat-form__rate
+            +textarea({
+                name: 'description',
+                placeholder: 'Описание'
+            }).cat-form__description
+            +input({
+                text: 'Любимчик',
+                type: 'checkbox',
+                name: 'favourite'
+            }).cat-form__fav
+            +input({
+                type: 'text',
+                name: 'img_link',
+                placeholder: 'Ссылка на фото',
+                required: true
+            }).cat-form__link#link
+            +button({text: 'Добавить котика'})
+        +error-hint

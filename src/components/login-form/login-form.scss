@@ -1,0 +1,38 @@
+.login-form {
+    &__title {
+        @include Title2;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__name,
+    &__email,
+    &__password {
+        margin-bottom: 0.7rem;
+        width: 100%;
+    }
+
+    &__hint {
+        text-align: center;
+        font-size: 0.9rem;
+        color: $pale-text;
+        margin-bottom: 1rem;
+    }
+
+    @media (min-width: 425px) {
+        &__name,
+        &__email,
+        &__password {
+            margin-bottom: 1rem;
+            width: 60%;
+        }
+
+        button {
+            width: 40%;
+        }
+    }
+}

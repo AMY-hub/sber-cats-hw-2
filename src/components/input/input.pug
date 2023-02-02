@@ -1,0 +1,9 @@
+mixin input(props)
+    label.field&attributes(attributes)!=props.text
+        input.field__input(
+            type=props.type 
+            name=props.name 
+            placeholder=props.placeholder 
+            required=props.required
+            min=props.min
+            max=props.max) 

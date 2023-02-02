@@ -1,0 +1,40 @@
+    .preloader {
+        $root: &;
+
+        background-color: $bg;
+        z-index: 11;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        display: none;
+
+        i {
+            margin-top: 30vh;
+            font-size: 3.5rem;
+            animation: load 1s linear infinite;
+        }
+
+        &.show {
+            display: block;
+        }
+    }
+@keyframes load {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.5);
+        opacity: 0.3;
+    }
+}

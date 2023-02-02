@@ -1,0 +1,6 @@
+mixin modal(props) 
+    .modal(id=props.id)
+        .modal__body
+            +button-icon({class: 'fa-solid fa-xmark'}).modal__close#popup-close
+            .modal__content
+                block

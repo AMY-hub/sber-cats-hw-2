@@ -1,0 +1,25 @@
+mixin login-form
+    .login-form&attributes(attributes)
+        h2.login-form__title Авторизация
+        p.login-form__hint *Добавление и изменение данных доступно только авторизованным пользователям
+        form.login-form__form
+            +input({
+                type: 'text',
+                name: 'name',
+                placeholder: 'Логин',
+                required: true
+            }).login-form__name
+            +input({
+                type: 'email',
+                name: 'email',
+                placeholder: 'Почта',
+                required: true
+            }).login-form__email
+            +input({
+                type: 'password',
+                name: 'password',
+                placeholder: 'Пароль',
+                required: true
+            }).login-form__password
+            +button({text: 'Войти'})
+        +error-hint

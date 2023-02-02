@@ -1,0 +1,69 @@
+@import './reset.scss';
+@import './vars.scss';
+@import '../../components/button/button.scss';
+@import '../../components/button-icon/button-icon.scss';
+@import '../../components/cards/cards.scss';
+@import '../../components/cat-form/cat-form.scss';
+@import '../../components/edit-form/edit-form.scss';
+@import '../../components/details/details.scss';
+@import '../../components/error/error.scss';
+@import '../../components/input/input.scss';
+@import '../../components/login-form/login-form.scss';
+@import '../../components/modal/modal.scss';
+@import '../../components/preloader/preloader.scss';
+@import '../../components/textarea/textarea.scss';
+@import '../../components/error-hint/error-hint.scss';
+@import '../../components/header/header.scss';
+
+i {
+    font-size: 1.5rem;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: $main-font;
+    background-color: $bg;
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: $bg-secondary;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    box-shadow: $main-shadow-top inset;
+}
+
+@media (min-width: 1240px) {
+
+    main {
+        padding: 30px calc(50% - 600px);
+    }
+
+    header,
+    footer {
+        padding: 1rem calc(50% - 600px);
+    }
+}
+
+.socials {
+    a:not(:last-child) {
+        padding-right: 5px;
+    }
+
+    i {
+        color: $btn-bg;
+    }
+}
+
+.copyright {
+    color: $pale-text;
+}

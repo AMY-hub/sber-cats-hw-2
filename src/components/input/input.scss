@@ -1,0 +1,26 @@
+.field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    &__input {
+        $root: &;
+
+        font-size: 1rem;
+        outline: none;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #0002;
+        height: 30px;
+        border-radius: 4px;
+        padding: 4px 8px;
+
+        &:focus {
+            box-shadow: 0 0 2px 0 #0004;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+        }
+    }
+}

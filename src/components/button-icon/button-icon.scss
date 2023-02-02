@@ -1,0 +1,24 @@
+.button-icon {
+    $root: &;
+
+    width: 30px;
+    height: 30px;
+    box-shadow: $main-shadow-bottom;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $btn-bg;
+    color: #fff;
+    transition: all 300ms;
+
+    &:hover {
+        color: $main-text;
+        background-color: $btn-bg-hover;
+    }
+
+    &:disabled {
+        pointer-events: none;
+        opacity: 0.3;
+    }
+}

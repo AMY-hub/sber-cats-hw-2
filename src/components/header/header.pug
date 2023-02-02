@@ -1,0 +1,9 @@
+mixin header
+    header.header
+        a.header__logo(href='/')
+            i(class="fa-solid fa-paw")
+            | Милые котики
+        .header__btns
+            +button-icon({class: 'fa-regular fa-plus'})(type='button' data-modal='catForm' disabled).header__add
+            +button({text: 'Войти'})(data-modal='auth').header__auth 
+            +button({text: 'Выйти'}).header__logout.hidden

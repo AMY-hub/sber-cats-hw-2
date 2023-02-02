@@ -1,0 +1,49 @@
+.cat-form {
+    $root: &;
+
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;  
+        
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__title {
+        @include Title2;
+        grid-column: 1 / 4;
+    }
+
+    &__img {
+        grid-row-end: span 3;
+        border-radius: 4px;
+        box-shadow: 0 0 2px 0 #0004;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__fav {
+        input[type="checkbox"] {
+            width: initial;
+            height: initial;
+            box-sizing: initial;            
+        }
+    }
+
+    &__description {
+        grid-row-end: span 2;
+        textarea {
+            height: 100%;
+            resize: vertical;  
+        }
+        
+    }
+
+    button {
+        justify-self: flex-end;
+        align-self: flex-end;
+    }
+}

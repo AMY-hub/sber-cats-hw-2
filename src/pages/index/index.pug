@@ -1,0 +1,13 @@
+extends ../../app/pug/layout
+
+block content 
+    main 
+        +cards
+    +modal({id: 'catForm'})
+        +cat-form
+    +modal({id: 'details'})
+        +details 
+    +modal({id: 'auth'})
+        +login-form
+    +error
+    +preloader

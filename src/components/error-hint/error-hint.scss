@@ -1,0 +1,12 @@
+.error-hint {
+    height: 0;
+    overflow: hidden;
+    margin-top: 1rem;
+    border-radius: 10px;
+    background-color: rgba(245, 84, 84, 0.133);
+    transition: all 200ms;
+
+    &__text {
+        padding: 1rem;
+    }
+}

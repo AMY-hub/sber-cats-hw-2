@@ -1,0 +1,48 @@
+.error {
+    $root: &;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $bg;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10vw;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        width: 100px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('../../assets/images/error-cat.svg');
+    }
+
+    &__content {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        color: $pale-text;
+    }
+
+    &__text {
+        font-size: 1.3rem;
+        color: $accent1;
+    }
+}
+
+.error-show {
+    display: flex;
+}

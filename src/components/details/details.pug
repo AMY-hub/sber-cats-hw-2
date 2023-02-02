@@ -1,0 +1,17 @@
+mixin details 
+    .details 
+        .details__info
+            h2.details__name
+            .details__img_link
+                img.details__img(alt="cat photo")
+            .details__age
+            .details__rate
+            .details__favourite
+            .details__description
+            .details__controls 
+                +button({text: 'Изменить'})#edit
+                +button({text: 'Удалить'})#delete
+            +error-hint
+        +edit-form.hidden
+
+
