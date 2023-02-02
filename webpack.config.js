@@ -76,10 +76,14 @@ module.exports = (env) => {
             },
             {
               loader: 'css-loader',
+              options: {
+                sourceMap: true,
+              },
             },
             {
               loader: 'postcss-loader',
               options: {
+                sourceMap: true,
                 postcssOptions: {
                   plugins: [
                     'autoprefixer'
@@ -88,14 +92,11 @@ module.exports = (env) => {
               }
             },
             {
-              loader: 'resolve-url-loader'
-            },
-            {
               loader: 'sass-loader',
               options: {
                 sassOptions: {
                   sourceMap: true,
-                  modules: true
+                  sourceMapContents: false
                 }
               }
             }
